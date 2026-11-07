@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Mesh - Réseau Maillé Local Sans Internet</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-green: #4ade80;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .brand-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .brand-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .hero-section {
+            max-width: 900px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .hero-image-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            background: var(--accent-blue);
+            color: #0f172a;
+            font-weight: bold;
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .version-tag {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="brand-title">WI-MESH : LE RÉSEAU MAILLÉ LOCAL</h1>
+        <p class="brand-subtitle">Communication décentralisée sans Internet ni réseau cellulaire</p>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-image-container">
+            <img src="mon-schema.jpg" alt="Schéma explicatif du réseau maillé Wi-Mesh">
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <a href="wimesh-v1.2.0.apk" class="download-btn">📥 Télécharger Wi-Mesh (.APK)</a>
+        <div class="version-tag">Version v1.2.0 • Installation directe sans perte de données</div>
+    </section>
+
+</body>
+</html>
