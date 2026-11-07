@@ -168,7 +168,7 @@
             color: var(--text-muted);
         }
 
-        /* --- NOUVEAU : Section Explication du Maillage & Vieux Téléphones --- */
+        /* --- Explication du Maillage & Vieux Téléphones / PC --- */
         .mesh-explainer {
             max-width: 900px;
             margin: 40px auto;
@@ -200,33 +200,66 @@
             font-weight: bold;
         }
 
-        /* --- Section Call To Action --- */
+        /* --- Section Call To Action (Multi-plateforme) --- */
         .cta-section {
+            max-width: 900px;
+            margin: 40px auto;
             text-align: center;
-            margin: 40px 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .cta-title {
+            font-size: 1.3rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .download-btn {
-            background: var(--accent-blue);
-            color: #0f172a;
             font-weight: bold;
-            padding: 16px 32px;
+            padding: 14px 24px;
             border-radius: 30px;
             text-decoration: none;
-            display: inline-block;
-            font-size: 1.1rem;
-            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
             transition: transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .download-btn:hover {
             transform: translateY(-2px);
         }
 
+        .btn-android {
+            background: var(--accent-blue);
+            color: #0f172a;
+        }
+
+        .btn-ios {
+            background: #ffffff;
+            color: #0f172a;
+        }
+
+        .btn-windows {
+            background: #0078d4;
+            color: #ffffff;
+        }
+
         .version-tag {
             font-size: 0.85rem;
             color: var(--text-muted);
-            margin-top: 12px;
+            margin-top: 18px;
         }
     </style>
 </head>
@@ -259,7 +292,7 @@
     <!-- Section Cas d'usage universels -->
     <section class="uses-section">
         <h2 class="uses-title">🎯 Une application, des milliers d'usages sans matériel</h2>
-        <p class="uses-subtitle">Puisque Wi-Mesh utilise uniquement les smartphones que vous possédez déjà, aucun boîtier ni module externe n'est nécessaire.</p>
+        <p class="uses-subtitle">Puisque Wi-Mesh utilise uniquement vos appareils existants, aucun boîtier ni module externe n'est nécessaire.</p>
         
         <div class="uses-grid">
             <div class="use-card">
@@ -282,20 +315,32 @@
         </div>
     </section>
 
-    <!-- NOUVEAU : Explication du principe du maillage et des vieux téléphones -->
+    <!-- Explication du principe du maillage et des vieux téléphones/PC -->
     <section class="mesh-explainer">
-        <h2>💡 Le super-pouvoir du maillage : Recyclez vos vieux smartphones</h2>
+        <h2>💡 Le super-pouvoir du maillage : Recyclez vos vieux appareils</h2>
         <p>
-            Le principe du réseau maillé (Mesh) repose sur la solidarité des appareils : chaque téléphone connecté devient automatiquement un relais pour transmettre les messages plus loin. 
+            Le principe du réseau maillé (Mesh) repose sur la solidarité des appareils : chaque téléphone ou ordinateur connecté devient automatiquement un relais pour transmettre les messages plus loin. 
         </p>
         <p>
-            Vous avez un <highlight>vieux smartphone qui traîne dans un tiroir</highlight> avec le Wi-Fi qui fonctionne ? Installez l'application dessus en 5 minutes, posez-le en hauteur (sur un rebord de fenêtre, au sommet d'une maison ou dans un point stratégique) : il servira de <highlight>relais permanent pour amplifier la portée</highlight> de tout le groupe sans consommer de forfait mobile.
+            Vous avez un <highlight>vieux smartphone ou PC qui traîne</highlight> avec le Wi-Fi qui fonctionne ? Installez Wi-Mesh dessus en 5 minutes, posez-le en hauteur (sur un rebord de fenêtre, au sommet d'une maison ou dans un point stratégique) : il servira de <highlight>relais permanent pour amplifier la portée</highlight> de tout le groupe sans consommer de forfait mobile.
         </p>
     </section>
 
+    <!-- Section Call To Action : Multi-plateforme (Android, iOS, Windows) -->
     <section class="cta-section">
-        <a href="wimesh-v1.2.0.apk" class="download-btn">📥 Télécharger Wi-Mesh (.APK)</a>
-        <div class="version-tag">Version v1.2.0 • Installation directe sans perte de données</div>
+        <h2 class="cta-title">Téléchargez Wi-Mesh sur tous vos appareils</h2>
+        <div class="download-buttons">
+            <a href="wimesh-v1.2.0.apk" class="download-btn btn-android">
+                🤖 Android (.APK)
+            </a>
+            <a href="#" class="download-btn btn-ios">
+                🍏 iPhone (iOS)
+            </a>
+            <a href="#" class="download-btn btn-windows">
+                💻 Windows (.EXE)
+            </a>
+        </div>
+        <div class="version-tag">Version v1.2.0 • Compatible Android, iOS & Windows</div>
     </section>
 
 </body>
