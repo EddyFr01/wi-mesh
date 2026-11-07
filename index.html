@@ -343,6 +343,10 @@
         </div>
         <div class="version-tag">Version v1.2.0 • Compatible Android, iOS & Windows</div>
     </section>
-
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+</script>
 </body>
 </html>
