@@ -109,7 +109,7 @@
             border-radius: 10px;
         }
 
-        /* --- NOUVEAU : Section Cas d'usage universels --- */
+        /* --- Section Cas d'usage universels --- */
         .uses-section {
             max-width: 900px;
             margin: 40px auto;
@@ -168,91 +168,36 @@
             color: var(--text-muted);
         }
 
-        /* --- Section Nœuds & Portée --- */
-        .nodes-section {
+        /* --- NOUVEAU : Section Explication du Maillage & Vieux Téléphones --- */
+        .mesh-explainer {
             max-width: 900px;
-            margin: 40px auto 20px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-        }
-
-        .nodes-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 12px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .nodes-title {
-            font-size: 1.3rem;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .badge-online {
-            background: rgba(56, 189, 248, 0.15);
-            color: var(--accent-blue);
+            margin: 40px auto;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(192, 132, 252, 0.1));
             border: 1px solid var(--accent-blue);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .nodes-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .node-card {
-            background: var(--bg-dark);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 14px;
+            border-radius: 16px;
+            padding: 30px;
             text-align: left;
         }
 
-        .node-top {
+        .mesh-explainer h2 {
+            font-size: 1.4rem;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 8px;
         }
 
-        .node-tag {
-            padding: 2px 8px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 0.85rem;
-        }
-
-        .node-tag.green { background: var(--accent-green); color: #0f172a; }
-        .node-tag.purple { background: var(--accent-purple); color: #0f172a; }
-
-        .node-name {
-            font-weight: 700;
-            font-size: 1.05rem;
-        }
-
-        .node-stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .node-stats strong {
+        .mesh-explainer p {
+            font-size: 0.95rem;
             color: var(--text-main);
+            margin-bottom: 14px;
+            line-height: 1.7;
+        }
+
+        .mesh-explainer highlight {
+            color: var(--accent-green);
+            font-weight: bold;
         }
 
         /* --- Section Call To Action --- */
@@ -311,7 +256,7 @@
         </div>
     </section>
 
-    <!-- NOUVEAU : Section Cas d'usage universels -->
+    <!-- Section Cas d'usage universels -->
     <section class="uses-section">
         <h2 class="uses-title">🎯 Une application, des milliers d'usages sans matériel</h2>
         <p class="uses-subtitle">Puisque Wi-Mesh utilise uniquement les smartphones que vous possédez déjà, aucun boîtier ni module externe n'est nécessaire.</p>
@@ -337,38 +282,15 @@
         </div>
     </section>
 
-    <!-- Section : Aperçu des Nœuds du réseau -->
-    <section class="nodes-section">
-        <div class="nodes-header">
-            <h2 class="nodes-title">📡 Nœuds, Sauts & Portée en direct</h2>
-            <span class="badge-online">1 en ligne • 14 captés</span>
-        </div>
-
-        <div class="nodes-list">
-            <div class="node-card">
-                <div class="node-top">
-                    <span class="node-tag green">a77b</span>
-                    <span class="node-name">Wi-Mesh Node a77b</span>
-                </div>
-                <div class="node-stats">
-                    <span>📏 Distance : <strong>119 km</strong></span>
-                    <span>⛰️ Altitude : <strong>11 580 m MSL</strong></span>
-                    <span>🔄 Relais direct</span>
-                </div>
-            </div>
-
-            <div class="node-card">
-                <div class="node-top">
-                    <span class="node-tag purple">6de4</span>
-                    <span class="node-name">Wi-Mesh Node 6de4</span>
-                </div>
-                <div class="node-stats">
-                    <span>🔄 Sauts (hops) : <strong>3 sauts</strong></span>
-                    <span>📏 Distance : <strong>106 km</strong></span>
-                    <span>⛰️ Altitude : <strong>900 m MSL</strong></span>
-                </div>
-            </div>
-        </div>
+    <!-- NOUVEAU : Explication du principe du maillage et des vieux téléphones -->
+    <section class="mesh-explainer">
+        <h2>💡 Le super-pouvoir du maillage : Recyclez vos vieux smartphones</h2>
+        <p>
+            Le principe du réseau maillé (Mesh) repose sur la solidarité des appareils : chaque téléphone connecté devient automatiquement un relais pour transmettre les messages plus loin. 
+        </p>
+        <p>
+            Vous avez un <highlight>vieux smartphone qui traîne dans un tiroir</highlight> avec le Wi-Fi qui fonctionne ? Installez l'application dessus en 5 minutes, posez-le en hauteur (sur un rebord de fenêtre, au sommet d'une maison ou dans un point stratégique) : il servira de <highlight>relais permanent pour amplifier la portée</highlight> de tout le groupe sans consommer de forfait mobile.
+        </p>
     </section>
 
     <section class="cta-section">
